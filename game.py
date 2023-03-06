@@ -54,7 +54,8 @@ if __name__ == '__main__':
 
         play()
     except game_exceptions.GameOver as ex_:
-        ex_.write_scores(*ex_.args)
+        name, scores, game_mode_ = tuple(ex_.args)
+        ex_.write_scores(name, scores, game_mode_)
         settings.SUCCESS_ATTACK = 1
         settings.ENEMY_DEAD = 5
         print('Game over')
