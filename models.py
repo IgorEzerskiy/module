@@ -118,8 +118,7 @@ class Player:
             print(f'Your score: {self.score}')
             enemy_obj.decrease_lives()
         elif result_attack == -1:
-            self.decrease_lives()
-            print(f'You missed!!! Your lives - 1. Lives: {self.lives}')
+            print(f'You missed!!!')
 
     def defence(self, enemy_obj):
         """
@@ -141,8 +140,7 @@ class Player:
         if result_attack == 0:
             print("It's a draw!")
         elif result_attack == 1:
-            print('You defence successfully!!! Enemy lives -1')
-            enemy_obj.decrease_lives()
+            print('You defence successfully!!!')
         elif result_attack == -1:
             self.decrease_lives()
             print(f'Your defense has been destroyed!!! Your lives - 1. Lives: {self.lives}')
